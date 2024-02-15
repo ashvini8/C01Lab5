@@ -27,4 +27,8 @@
                 with:
                   node-version: ${{ matrix.node-version }}
               - run: npm i
+              - run: npm install mongodb-runner -g
+              - run: mongodb-runner start
+              - run: npm start &
               - run: npm test
+              - run: mongodb-runner stop --all
