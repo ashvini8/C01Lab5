@@ -41,8 +41,6 @@ test("/getAllNotes - Return list of zero notes for getAllNotes", async () => {
 
     expect(getAllNotesRes.status).toBe(200);
     expect(getAllNotesBody.response.length).toBe(0);
-    expect(getAllNotesBody.response[0].title).toBe('');
-    expect(getAllNotesBody.response[0].content).toBe('');
 });
   
 test("/getAllNotes - Return list of two notes for getAllNotes", async () => {
